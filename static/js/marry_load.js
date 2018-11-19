@@ -2,7 +2,7 @@ $(function () {
 
     function Vector(a, b) {
         this.x = a;
-        this.y = b
+        this.y = b;
     }
     Vector.prototype = {
         rotate: function (b) {
@@ -202,8 +202,9 @@ $(function () {
     var clientHeight = $(window).height();
     $(function () {
         $loveHeart = $("#loveHeart");
-        var a = $loveHeart.width() / 2;
-        var b = $loveHeart.height() / 2 - 55;
+        $loveHeart.css("position","relative");
+        $loveHeart.css("top","20%");
+
         $garden = $("#garden");
         gardenCanvas = $garden[0];
         gardenCanvas.width = $("#loveHeart").width();
@@ -211,13 +212,14 @@ $(function () {
         gardenCtx = gardenCanvas.getContext("2d");
         gardenCtx.globalCompositeOperation = "lighter";
         garden = new Garden(gardenCtx, gardenCanvas);
-        $("#content").css("width", $loveHeart.width() + $("#code").width());
-        $("#content").css("height", Math.max($loveHeart.height(), $("#code").height()));
-        $("#content").css("margin-top", Math.max(($window.height() - $("#content").height()) / 2, 10));
-        $("#content").css("margin-left", Math.max(($window.width() - $("#content").width()) / 2, 10));
+        $("#content").css("width", $loveHeart.width());
+        $("#content").css("height", $loveHeart.height());
+        $("#content").css("margin", "0 auto");
+        // $("#content").css("margin-left", Math.max(($window.width() - $("#content").width()) / 2, 10));
         setInterval(function () {
             garden.render()
         }, Garden.options.growSpeed)
+
     });
     $(window).resize(function () {
         var b = $(window).width();
@@ -260,29 +262,7 @@ $(function () {
                 d += 0.2
             }
         }, c)
-    }(function (a) {
-        a.fn.typewriter = function () {
-            this.each(function () {
-                var d = a(this),
-                    c = d.html(),
-                    b = 0;
-                d.html("");
-                var e = setInterval(function () {
-                    var f = c.substr(b, 1);
-                    if (f == "<") {
-                        b = c.indexOf(">", b) + 1
-                    } else {
-                        b++
-                    }
-                    d.html(c.substring(0, b) + (b & 1 ? "_" : ""));
-                    if (b >= c.length) {
-                        clearInterval(e)
-                    }
-                }, 75)
-            });
-            return this
-        }
-    })(jQuery);
+    }
 
     function timeElapse(c) {
         var e = Date();
@@ -319,12 +299,8 @@ $(function () {
         $("#words").css("left", $("#garden").position().left + 70)
     }
 
-    function adjustCodePosition() {
-        $("#code").css("margin-top", ($("#garden").height() - $("#code").height()) / 2)
-    }
-
     function showLoveU() {
-        $("#loveu").fadeIn(3000)
+        $("#loveu").fadeIn(3000);
     };
     var offsetX = $("#loveHeart").width() / 2;
     var offsetY = $("#loveHeart").height() / 2 - 55;
@@ -337,21 +313,16 @@ $(function () {
     if (!document.createElement('canvas').getContext) {
         var msg = document.createElement("div");
         msg.id = "errorMsg";
-        msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        msg.innerHTML = "你的浏览器不支持 HTML5!<br/>请使用 Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
         document.body.appendChild(msg);
-        $("#code").css("display", "none")
-        $("#copyright").css("position", "absolute");
-        $("#copyright").css("bottom", "10px");
         document.execCommand("stop");
     } else {
         setTimeout(function () {
             startHeartAnimation();
-        }, 5000);
+        }, 2000);
         timeElapse(together);
         setInterval(function () {
             timeElapse(together);
         }, 500);
-        adjustCodePosition();
-        $("#code").typewriter();
     }
 })

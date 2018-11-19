@@ -12,11 +12,16 @@ Vue.use(Router)
 export default new Router({
     routes: [{
             path: '*',
-            redirect: '/index'
+            redirect: '/load'
         },
         {
             path: '/',
-            redirect: '/index'
+            redirect: '/load'
+        },
+        {
+            path: '/load',
+            name: '/load',
+            component: resolve => require(['@/components/load/load'], resolve)
         },
         {
             path: '/index',
