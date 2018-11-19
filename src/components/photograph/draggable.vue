@@ -1,0 +1,195 @@
+<template>
+    <div id="draggable">
+        <div class="drag_div" id="drag_div">
+            <div class="one">
+                <p class="img_100 margin_bottom_15"><img src="../../../static/images/draggable_01.png"></p>
+                <p class="text_center">我是第一张</p>
+            </div>
+            <div class="two">
+                <p class="img_100 margin_bottom_15"><img src="../../../static/images/draggable_01.png"></p>
+                <p class="text_center">我是第二张</p>
+            </div>
+            <div class="three">
+                <p class="img_100 margin_bottom_15"><img src="../../../static/images/draggable_01.png"></p>
+                <p class="text_center">我是第三张</p>
+            </div>
+            <div class="four">
+                <p class="img_100 margin_bottom_15"><img src="../../../static/images/draggable_01.png"></p>
+                <p class="text_center">我是第四张</p>
+            </div>
+            <div class="five">
+                <p class="img_100 margin_bottom_15"><img src="../../../static/images/draggable_01.png"></p>
+                <p class="text_center">我是第五张</p>
+            </div>
+            <div class="six">
+                <p class="img_100 margin_bottom_15"><img src="../../../static/images/draggable_01.png"></p>
+                <p class="text_center">我是第六张</p>
+            </div>
+            <div class="seven">
+                <p class="img_100 margin_bottom_15"><img src="../../../static/images/draggable_01.png"></p>
+                <p class="text_center">我是第七张</p>
+            </div>
+            <div class="eight">
+                <p class="img_100 margin_bottom_15"><img src="../../../static/images/draggable_01.png"></p>
+                <p class="text_center">我是第八张</p>
+            </div>
+            <div class="nine">
+                <p class="img_100 margin_bottom_15"><img src="../../../static/images/draggable_01.png"></p>
+                <p class="text_center">我是第九张</p>
+            </div>
+            <div class="ten">
+                <p class="img_100 margin_bottom_15"><img src="../../../static/images/draggable_01.png"></p>
+                <p class="text_center">我是第十张</p>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+import '../../../static/js/draggable.js';
+
+export default {
+    data() {
+        return {
+
+        }
+    },
+    computed: {
+
+    },
+    watch: {
+
+    },
+    components: {
+
+    },
+    created() {
+    },
+    mounted() {
+        // this.$router.go(0);
+    },
+    methods: {
+
+    }
+}
+</script>
+<style scoped>
+/* @import "../../../static/css/.css"; */
+.drag_div {
+    margin: 0 auto;
+    margin-top: 80px;
+    /* transform: translateY(50%); */
+    width: 1300px;
+    height: 760px;
+    overflow: hidden;
+    position: relative;
+}
+.img_100 img {
+    width: 100%;
+    max-width: 100%;
+}
+.margin_bottom_15 {
+    margin-bottom: 15px;
+}
+.text_center {
+    text-align: center;
+}
+.drag_div > div {
+    background: #fff;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.drag_div > div.one {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 240px;
+}
+.drag_div > div.two {
+    position: absolute;
+    top: 260px;
+    left: 0;
+    width: 20%;
+    height: 240px;
+}
+.drag_div > div.three {
+    position: absolute;
+    top: 520px;
+    left: 0;
+    width: 20%;
+    height: 240px;
+}
+.drag_div > div.four {
+    position: absolute;
+    top: 0px;
+    left: 21%;
+    width: 37%;
+    height: 760px;
+}
+.drag_div > div.five {
+    position: absolute;
+    top: 0px;
+    left: 59%;
+    width: 20%;
+    height: 280px;
+}
+.drag_div > div.six {
+    position: absolute;
+    top: 300px;
+    left: 59%;
+    width: 20%;
+    height: 220px;
+}
+.drag_div > div.seven {
+    position: absolute;
+    top: 540px;
+    left: 59%;
+    width: 20%;
+    height: 220px;
+}
+.drag_div > div.eight {
+    position: absolute;
+    top: 0px;
+    left: 80%;
+    width: 20%;
+    height: 280px;
+}
+.drag_div > div.nine {
+    position: absolute;
+    top: 300px;
+    left: 80%;
+    width: 20%;
+    height: 220px;
+}
+.drag_div > div.ten {
+    position: absolute;
+    top: 540px;
+    left: 80%;
+    width: 20%;
+    height: 220px;
+}
+.drag_div > div.one img,
+.drag_div > div.two img,
+.drag_div > div.three img {
+    width: 100%;
+    height: 180px;
+}
+.drag_div > div.four img {
+    width: 100%;
+    height: 700px;
+}
+.drag_div > div.five img,
+.drag_div > div.eight img {
+    width: 100%;
+    height: 220px;
+}
+.drag_div > div.six img,
+.drag_div > div.seven img,
+.drag_div > div.nine img,
+.drag_div > div.ten img {
+    width: 100%;
+    height: 160px;
+}
+</style>
