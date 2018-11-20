@@ -1,35 +1,8 @@
 <template>
     <div id="load">
+        <div class="load_bg"></div>
         <div id="mainDiv">
             <div id="content">
-                <!-- <div id="code">
-                    <span class="comments">/**</span><br />
-                    <span class="space" /><span class="comments">* We are both Fudan SSers and programmers,</span><br />
-                    <span class="space" /><span class="comments">* so I write some code to celebrate our 1st anniversary.</span><br />
-                    <span class="space" /><span class="comments">*/</span><br />
-                    Boy i = <span class="keyword">new</span> Boy(<span class="string">"hackerzhou"</span>);<br />
-                    Girl u = <span class="keyword">new</span> Girl(<span class="string">"MaryNee"</span>);<br />
-                    <span class="comments">// Nov 2, 2010, I told you I love you. </span><br />
-                    i.love(u);<br />
-                    <span class="comments">// Luckily, you accepted and became my girlfriend eversince.</span><br />
-                    u.accepted();<br />
-                    <span class="comments">// Since then, I miss u every day.</span><br />
-                    i.miss(u);<br />
-                    <span class="comments">// And take care of u and our love.</span><br />
-                    i.takeCareOf(u);<br />
-                    <span class="comments">// You say that you won't be so easy to marry me.</span><br />
-                    <span class="comments">// So I keep waiting and I have confidence that you will.</span><br />
-                    <span class="keyword">boolean</span> isHesitate = <span class="keyword">true</span>;<br />
-                    <span class="keyword">while</span> (isHesitate) {<br />
-                    <span class="placeholder" />i.waitFor(u);<br />
-                    <span class="placeholder" /><span class="comments">// I think it is an important decision</span><br />
-                    <span class="placeholder" /><span class="comments">// and you should think it over.</span><br />
-                    <span class="placeholder" />isHesitate = u.thinkOver();<br />
-                    }<br />
-                    <span class="comments">// After a romantic wedding, we will live happily ever after.</span><br />
-                    i.marry(u);<br />
-                    i.liveHappilyWith(u);<br />
-                </div> -->
                 <div id="loveHeart">
                     <canvas id="garden"></canvas>
                     <div id="words">
@@ -77,12 +50,14 @@ export default {
 </script>
 <style scoped>
 /* @import "../../../static/css/.css"; */
-body {
-    margin: 0;
-    padding: 0;
+.load_bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
     background: #ffe;
     font-size: 12px;
     overflow: auto;
+    background: url(../../../static/images/marry/marry_bg_01.jpg) no-repeat cover;
 }
 #mainDiv {
     width: 100%;
