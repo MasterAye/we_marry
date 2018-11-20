@@ -57,7 +57,8 @@ export default {
     background: #ffe;
     font-size: 12px;
     overflow: auto;
-    background: url(../../../static/images/marry/marry_bg_01.jpg) no-repeat cover;
+    background: url(../../../static/images/marry/marry_bg_02.jpg) center/100% 100% no-repeat;
+    /* background-size: cover; */
 }
 #mainDiv {
     width: 100%;
