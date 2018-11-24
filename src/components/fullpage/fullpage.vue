@@ -152,8 +152,7 @@ export default {
     width: 100%;
     height: 100%;
 }
-#fullpage .swiper-container .swiper-wrapper .swiper-slide {
-}
+
 
 /* swiper_slide_01 第一个页面样式开始 */
 body {

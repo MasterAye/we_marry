@@ -202,8 +202,8 @@ $(function () {
     var clientHeight = $(window).height();
     $(function () {
         $loveHeart = $("#loveHeart");
-        $loveHeart.css("position","relative");
-        $loveHeart.css("top","20%");
+        $loveHeart.css("position", "relative");
+        $loveHeart.css("top", "20%");
 
         $garden = $("#garden");
         gardenCanvas = $garden[0];
@@ -300,7 +300,7 @@ $(function () {
     }
 
     function showLoveU() {
-        $("#loveu").fadeIn(3000);
+        $("#loveu").fadeIn(3000,weLoveAnimation);
     };
     var offsetX = $("#loveHeart").width() / 2;
     var offsetY = $("#loveHeart").height() / 2 - 55;
@@ -324,5 +324,8 @@ $(function () {
         setInterval(function () {
             timeElapse(together);
         }, 500);
+    }
+    function weLoveAnimation(){
+        
     }
 })

@@ -1,6 +1,6 @@
 <template>
     <div id="load">
-        <div class="load_bg"></div>
+        <!-- <div class="load_bg"></div> -->
         <div id="mainDiv">
             <div id="content">
                 <div id="loveHeart">
@@ -17,6 +17,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="goToMarryHappy">
+            
         </div>
     </div>
 </template>
@@ -50,6 +53,15 @@ export default {
 </script>
 <style scoped>
 /* @import "../../../static/css/.css"; */
+html,
+body,
+#load {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 .load_bg {
     position: fixed;
     width: 100%;
@@ -63,6 +75,7 @@ export default {
 #mainDiv {
     width: 100%;
     height: 100%;
+    background-color: rgb(255, 255, 238);
 }
 #loveHeart {
     float: left;

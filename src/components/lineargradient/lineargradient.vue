@@ -52,11 +52,12 @@ export default {
 }
 </script>
 
-<style>
-html,
-body,
-.lineargradient {
+<style scoped>
+
+#lineargradient {
+    position: fixed;
     background: #222;
+    width: 100%;
     height: 100%;
     overflow: hidden;
     text-align: center;
@@ -101,7 +102,7 @@ body,
     }
 }
 
-.contact-fp-wrap:hover .booton {
+.contact-fp-wrap .booton {
     -webkit-animation: 0.5s draw linear forwards;
     animation: 0.5s draw linear forwards;
 }

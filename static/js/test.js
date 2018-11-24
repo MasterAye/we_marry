@@ -2,8 +2,6 @@ $(function () {
     // One of my first <canvas> experiments, woop! :D
 
 
-
-
     var asideNav = $('#aside-nav');
     var asideNavTop;
     var asideNavLeft;
@@ -17,7 +15,7 @@ $(function () {
     var RADIUS_SCALE_MIN = 1;
     var RADIUS_SCALE_MAX = 1.5;
 
-    var QUANTITY = 25;
+    var QUANTITY = 100;
 
     var canvas;
     var context;
@@ -25,6 +23,7 @@ $(function () {
 
     var mouseX = SCREEN_WIDTH * 0.5;
     var mouseY = SCREEN_HEIGHT * 0.5;
+
     var mouseIsDown = false;
 
     function init() {
@@ -145,8 +144,9 @@ $(function () {
 
         context.fillStyle = 'rgba(0,0,0,0.05)';
         context.fillStyle = 'rgba(34,34,34,1)';
+        // context.fillStyle = 'rgba(0,0,0,1)';
         context.fillRect(0, 0, context.canvas.width, context.canvas.height);
-        context.fillRect(0, 0, context.canvas.width*2, context.canvas.height*2);
+        // context.fillRect(0, 0, context.canvas.width*2, context.canvas.height*2);
 
         for (i = 0, len = particles.length; i < len; i++) {
             var particle = particles[i];
@@ -185,8 +185,8 @@ $(function () {
             context.moveTo(lp.x, lp.y);
             context.lineTo(particle.position.x, particle.position.y);
             context.stroke();
-            context.arc(particle.position.x, particle.position.y, particle.size / 2, 0, Math.PI * 2, true);
-            context.fill();
+            // context.arc(particle.position.x, particle.position.y, particle.size / 2, 0, Math.PI * 2, true);
+            // context.fill();
         }
     }
     init();

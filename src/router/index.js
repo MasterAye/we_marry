@@ -20,7 +20,7 @@ export default new Router({
         },
         {
             path: '/load',
-            name: '/load',
+            name: 'load',
             component: resolve => require(['@/components/load/load'], resolve)
         },
         {

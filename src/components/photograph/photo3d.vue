@@ -20,7 +20,28 @@
 <script>
 import "../../../static/js/photo3d.js";
 export default {
+    data() {
+        return {
 
+        }
+    },
+    computed: {
+
+    },
+    watch: {
+
+    },
+    components: {
+
+    },
+    created() {
+    },
+    mounted() {
+        // this.$router.go(0);
+    },
+    methods: {
+
+    }
 }
 </script>
 
